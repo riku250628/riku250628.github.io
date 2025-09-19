@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube 数据仪表板</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header with logout button -->
+    <div class="header-bar">
+      <div class="user-info">
+        <span class="material-icons">account_circle</span>
+        <span id="currentUser">用户</span>
+      </div>
+      <button class="logout-button" onclick="logout()" title="登出">
+        <span class="material-icons">logout</span>
+        登出
+      </button>
+    </div>
+
+    <!-- Material Design 3 Secondary Tabs -->
+    <div class="md3-secondary-tabs" role="tablist" aria-label="Dashboard sections">
+      <button class="md3-secondary-tab active" role="tab" aria-selected="true" aria-controls="summary-panel"
+        id="summary-tab" onclick="switchTab('summary')">
+        <span class="material-icons">dashboard</span>
+        概览
+      </button>
+      <button class="md3-secondary-tab" role="tab" aria-selected="false" aria-controls="chart-panel" id="chart-tab"
+        onclick="switchTab('chart')">
+        <span class="material-icons">bar_chart</span>
+        图表
+      </button>
+    </div>
+
+    <!-- Tab Content Panels -->
+    <div id="summary-panel" class="tab-content active" role="tabpanel" aria-labelledby="summary-tab">
+      <div class="summary-table-container">
+        <table class="summary-table" id="summaryTable">
+          <thead>
+            <tr>
+              <th><span class="material-icons"
+                  style="font-size: 18px; vertical-align: middle; margin-right: 6px;">videocam</span></th>
+              <th><span class="material-icons"
+                  style="font-size: 18px; vertical-align: middle; margin-right: 6px;">group</span></th>
+              <th><span class="material-icons"
+                  style="font-size: 18px; vertical-align: middle; margin-right: 6px;">visibility</span></th>
+              <th><span class="material-icons"
+                  style="font-size: 18px; vertical-align: middle; margin-right: 6px;">thumb_up</span></th>
+              <th>赞播比</th>
+            </tr>
+          </thead>
+          <tbody id="summaryTableBody">
+            <!-- Data will be populated here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Chart Tab Panel -->
+    <div id="chart-panel" class="tab-content" role="tabpanel" aria-labelledby="chart-tab">
+      <div class="controls">
+        <div class="date-selector">
+          <span class="icon">videocam</span>
+          <div class="selector-buttons">
+            <div class="button-row">
+              <button class="date-button active" onclick="selectDate('舞蹈版')" data-date="舞蹈版">舞蹈版</button>
+              <button class="date-button" onclick="selectDate('M2竖版1')" data-date="M2竖版1">M2竖版1</button>
+              <button class="date-button" onclick="selectDate('M2横版1')" data-date="M2横版1">M2横版1</button>
+              <button class="date-button" onclick="selectDate('KBS竖版1')" data-date="KBS竖版1">KBS竖版1</button>
+              <button class="date-button" onclick="selectDate('KBS横版1')" data-date="KBS横版1">KBS横版1</button>
+              <button class="date-button" onclick="selectDate('MBC竖版1')" data-date="MBC竖版1">MBC竖版1</button>
+              <button class="date-button" onclick="selectDate('MBC横版1')" data-date="MBC横版1">MBC横版1</button>
+              <button class="date-button" onclick="selectDate('SBS竖版1')" data-date="SBS竖版1">SBS竖版1</button>
+            </div>
+            <div class="button-row">
+              <button class="date-button" onclick="selectDate('SBS横版1')" data-date="SBS横版1">SBS横版1</button>
+              <button class="date-button" onclick="selectDate('M2竖版2')" data-date="M2竖版2">M2竖版2</button>
+              <button class="date-button" onclick="selectDate('M2横版2')" data-date="M2横版2">M2横版2</button>
+              <button class="date-button" onclick="selectDate('KBS竖版2')" data-date="KBS竖版2">KBS竖版2</button>
+              <button class="date-button" onclick="selectDate('KBS横版2')" data-date="KBS横版2">KBS横版2</button>
+              <button class="date-button" onclick="selectDate('MBC竖版2')" data-date="MBC竖版2">MBC竖版2</button>
+              <button class="date-button" onclick="selectDate('SBS竖版2')" data-date="SBS竖版2">SBS竖版2</button>
+            </div>
+          </div>
+        </div>
+        <div class="time-range-selector">
+          <span class="icon">schedule</span>
+          <div class="selector-buttons">
+            <button class="time-button active" onclick="selectTimeRange('7d')" data-range="7d">7天</button>
+            <button class="time-button" onclick="selectTimeRange('3d')" data-range="3d">3天</button>
+            <button class="time-button" onclick="selectTimeRange('1d')" data-range="1d">1天</button>
+            <button class="time-button" onclick="selectTimeRange('12h')" data-range="12h">12小时</button>
+            <button class="time-button" onclick="selectTimeRange('6h')" data-range="6h">6小时</button>
+            <button class="time-button" onclick="selectTimeRange('all')" data-range="all">全部</button>
+          </div>
+        </div>
+        <div class="member-selector">
+          <span class="icon">group</span>
+          <div class="selector-buttons">
+            <button class="member-button active" onclick="toggleMember('RIKU')" data-member="RIKU">RIKU</button>
+            <button class="member-button active" onclick="toggleMember('YUSHI')" data-member="YUSHI">YUSHI</button>
+          </div>
+        </div>
+        <div class="sync-info">
+          <div class="sync-status-row">
+            <span id="syncStatus">未连接</span>
+            <div class="sync-right">
+              <span id="latestData"></span>
+              <span style="color: #888; font-size: 11px;"><span class="material-icons"
+                  style="font-size: 12px; vertical-align: middle;">wifi</span> 每5分钟更新</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="charts-grid">
+        <div class="card">
+          <div class="chart-title">
+            <div class="chart-title-left">
+              <span class="material-icons"
+                style="font-size: 18px; vertical-align: middle; margin-right: 6px;">visibility</span>观看数
+            </div>
+            <div class="chart-title-right" id="viewCountVideoName"></div>
+          </div>
+          <div class="chart-canvas"><canvas id="viewCountChart"></canvas></div>
+        </div>
+        <div class="card">
+          <div class="chart-title">
+            <div class="chart-title-left">
+              <span class="material-icons"
+                style="font-size: 18px; vertical-align: middle; margin-right: 6px;">thumb_up</span>点赞数
+            </div>
+            <div class="chart-title-right" id="likeCountVideoName"></div>
+          </div>
+          <div class="chart-canvas"><canvas id="likeCountChart"></canvas></div>
+        </div>
+        <div class="card">
+          <div class="chart-title">
+            <div class="chart-title-left">
+              <span class="material-icons"
+                style="font-size: 18px; vertical-align: middle; margin-right: 6px;">chat</span>评论数
+            </div>
+            <div class="chart-title-right" id="commentCountVideoName"></div>
+          </div>
+          <div class="chart-canvas"><canvas id="commentCountChart"></canvas></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

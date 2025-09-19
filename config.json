@@ -1,0 +1,54 @@
+{
+  "defaultSettings": {
+    "currentSource": "舞蹈版",
+    "currentTimeRange": "7d",
+    "selectedMembers": ["RIKU", "YUSHI"]
+  },
+  "memberColors": {
+    "RIKU": "#64B5F6",
+    "YUSHI": "#FFB74D"
+  },
+  "videoNames": {
+    "舞蹈版": "9/3 舞蹈版",
+    "M2竖版1": "9/4 M2竖版",
+    "M2横版1": "9/4 M2横版",
+    "KBS竖版1": "9/5 KBS竖版",
+    "KBS横版1": "9/5 KBS横版",
+    "MBC竖版1": "9/6 MBC竖版",
+    "MBC横版1": "9/6 MBC横版",
+    "SBS竖版1": "9/7 SBS竖版",
+    "SBS横版1": "9/7 SBS横版",
+    "M2竖版2": "9/11 M2竖版",
+    "M2横版2": "9/11 M2横版",
+    "KBS竖版2": "9/12 KBS竖版",
+    "KBS横版2": "9/12 KBS横版",
+    "MBC竖版2": "9/13 MBC竖版",
+    "SBS竖版2": "9/14 SBS竖版"
+  },
+  "urls": {
+    "summarySheetUrl": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=0",
+    "sheetsUrls": {
+      "舞蹈版": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=493018926",
+      "M2竖版1": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=1878623858",
+      "M2横版1": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=102997297",
+      "KBS竖版1": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=691957802",
+      "KBS横版1": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=1872508504",
+      "MBC竖版1": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=311445091",
+      "MBC横版1": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=1039996147",
+      "SBS竖版1": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=1420917634",
+      "SBS横版1": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=803803275",
+      "M2竖版2": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=1214505771",
+      "M2横版2": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=535440118",
+      "KBS竖版2": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=207150138",
+      "KBS横版2": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=1197127501",
+      "MBC竖版2": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=513943314",
+      "SBS竖版2": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=1696562865"
+    }
+  },
+  "auth": {
+    "credentials": [{
+      "username": "admin",
+      "password": "admin123"
+    }]
+  }
+}
