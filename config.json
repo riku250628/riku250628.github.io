@@ -25,7 +25,8 @@
     "MBC竖版2": "9/13 MBC竖版",
     "SBS竖版2": "9/14 SBS竖版",
     "NASA": "NASA",
-    "nnt": "nnt"
+    "nnt": "nnt",
+    "24hrCAM": "10/30 24hrCAM"
   },
   "urls": {
     "summarySheetUrl": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=0",
@@ -46,7 +47,8 @@
       "MBC竖版2": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=513943314",
       "SBS竖版2": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=1696562865",
       "NASA": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=1299370969",
-      "nnt": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=290304836"
+      "nnt": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=290304836",
+      "24hrCAM": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=2061990966"
     }
   },
   "auth": {
