@@ -2,11 +2,13 @@
   "defaultSettings": {
     "currentSource": "舞蹈版",
     "currentTimeRange": "7d",
-    "selectedMembers": ["RIKU", "YUSHI"]
+    "selectedMembers": ["RIKU", "YUSHI", "WONBIN", "SHOTARO"]
   },
   "memberColors": {
     "RIKU": "#64B5F6",
-    "YUSHI": "#FFB74D"
+    "YUSHI": "#FFB74D",
+    "WONBIN": "#64B5F6",
+    "SHOTARO": "#FFB74D"
   },
   "videoNames": {
     "舞蹈版": "9/3 舞蹈版",
@@ -26,7 +28,8 @@
     "SBS竖版2": "9/14 SBS竖版",
     "NASA": "NASA",
     "nnt": "nnt",
-    "24hrCAM": "10/30 24hrCAM"
+    "24hrCAM": "10/30 24hrCAM",
+    "SBS横版3": "11/30 SBS横版"
   },
   "urls": {
     "summarySheetUrl": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=0",
@@ -48,7 +51,8 @@
       "SBS竖版2": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=1696562865",
       "NASA": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=1299370969",
       "nnt": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=290304836",
-      "24hrCAM": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=2061990966"
+      "24hrCAM": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=2061990966",
+      "SBS横版3": "https://docs.google.com/spreadsheets/d/1_vKJe8wjwtChsIjn7Jpxh1zigU6UvVlfxu4hWAnRjF4/export?format=csv&gid=831611221"
     }
   },
   "auth": {
